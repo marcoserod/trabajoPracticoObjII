@@ -22,7 +22,7 @@ public class PartidoTestCase {
 	@Spy
 	ArrayList<Protagonista> spiedList = new ArrayList<Protagonista>();
 	
-	
+		
 	@Before
 	public void setUp() {
 	mockUnEstado = Mockito.mock(Estado.class);
@@ -40,11 +40,10 @@ public class PartidoTestCase {
 	@Test
 	public void testPartidoBocaRiverIniciado() {
 		assertEquals("Monumental", metegol.getLugar());
-		//assertEquals(estado.estadoPartido(), metegol.getEstado());
+		assertNotEquals(estado.estadoPartido(), metegol.getEstado());
 		assertEquals(new Date(), metegol.getFechaDeComienzo());
 		assertTrue(metegol.getOponentes().contains(Boca));
-		assertTrue(metegol.getOponentes().contains(River));
-		
+		assertTrue(metegol.getOponentes().contains(River));		
 	}
 
 }

@@ -13,11 +13,6 @@ public abstract class Protagonista {
 		this.resultados = new ArrayList<String>();
 	}
 	
-	public Protagonista(String nombre, List<String> resultados) {
-		this.nombre = nombre;
-		this.resultados = resultados;
-	}
-	
 	public abstract String getNombre();
 	public abstract List<String> getResultados();
 	

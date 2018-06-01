@@ -1,4 +1,5 @@
 package cuotaDeApuesta;
+import partidoJuego.*;
 
 import java.util.List;
 

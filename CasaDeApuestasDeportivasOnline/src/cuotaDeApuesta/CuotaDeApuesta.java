@@ -1,4 +1,5 @@
 package cuotaDeApuesta;
+import partidoJuego.*;
 
 public class CuotaDeApuesta {
 
@@ -7,8 +8,8 @@ public class CuotaDeApuesta {
 	private Protagonista protagonistaB;
 	
 	public CuotaDeApuesta(Partido partido) {
-		this.protagonistaA = partido.getOponentes().first();
-		this.protagonistaB = partido.getOponentes().last();
+		this.protagonistaA = partido.getOponentes().get(0);
+		this.protagonistaB = partido.getOponentes().get(1);
 		this.algoritmoDeProbabilidad = new HistoriaReciente();
 	}
 	
@@ -18,11 +19,11 @@ public class CuotaDeApuesta {
 	}
 	
 	public int cuotaVictoriaA() {
-		return 1 + (1 - this.algoritmoDeProbabilidad.probabilidadDeVictoria(this.protagonistaA));
+		return 1 + (1 - this.algoritmoDeProbabilidad.probabilidadDeVictoria(this.protagonistaA, this.protagonistaB));
 	}
 	
 	public int cuotaVictoriaB() {
-		return 1 + (1-this.algoritmoDeProbabilidad.probabilidadDeVictoria(this.protagonistaB));
+		return 1 + (1-this.algoritmoDeProbabilidad.probabilidadDeVictoria(this.protagonistaB, this.protagonistaA));
 	}
 	
 	

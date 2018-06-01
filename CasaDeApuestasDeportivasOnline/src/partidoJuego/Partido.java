@@ -45,7 +45,7 @@ public class Partido {
 	}
 	 
 	
-	public void nextState(Estado estado) {
+	public void setEstado(Estado estado) {
 		if (this.estadoResultado != estado)  {
 			this.estadoResultado = estado;
 		} else {
