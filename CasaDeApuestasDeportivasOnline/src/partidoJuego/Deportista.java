@@ -20,7 +20,7 @@ public class Deportista extends Protagonista{
 	}
 
 	@Override
-	public List<String> getresultados() {
+	public List<String> getResultados() {
 		return this.resultados;
 	}
 	

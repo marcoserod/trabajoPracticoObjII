@@ -19,7 +19,7 @@ public class Equipo extends Protagonista{
 	}
 
 	@Override
-	public List<String> getresultados() {
+	public List<String> getResultados() {
 		return this.resultados;
 	}
 	

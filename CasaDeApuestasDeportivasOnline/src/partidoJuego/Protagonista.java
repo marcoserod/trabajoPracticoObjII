@@ -3,7 +3,7 @@ package partidoJuego;
 import java.util.ArrayList;
 import java.util.List;
 
-abstract class Protagonista {
+public abstract class Protagonista {
 	String nombre;
 	List<String> resultados;
 	
@@ -19,6 +19,6 @@ abstract class Protagonista {
 	}
 	
 	public abstract String getNombre();
-	public abstract List<String> getresultados();
+	public abstract List<String> getResultados();
 	
 }

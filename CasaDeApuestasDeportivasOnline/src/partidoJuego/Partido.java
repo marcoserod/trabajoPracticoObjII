@@ -5,22 +5,23 @@ import java.util.List;
 
 
 public class Partido {
-	private Date fechaDeComienzo;
-	private String horaDeComienzo;
+	private Date fechaHoraDeComienzo;
 	private String lugar;
 	private Estado estadoResultado;
 	private String resultado;
 	private List <Protagonista> oponentes;
 	
 
-	public Partido(String lugar) {
-		this.fechaDeComienzo = new Date();
+	public Partido(String lugar, List<Protagonista> oponentes) {
+		this.fechaHoraDeComienzo = new Date();
 		this.lugar = lugar;
 		this.estadoResultado  = new NoIniciado();
+		this.oponentes = oponentes;
 	}
+	
 
 	public Date getFechaDeComienzo() {
-		return this.fechaDeComienzo;
+		return this.fechaHoraDeComienzo;
 	}
 	
 	public String getLugar() {
@@ -31,6 +32,9 @@ public class Partido {
 		return this.oponentes;
 	}
 	
+	public Estado getEstado() {
+		return this.estadoResultado;
+	}
 	public String getResultado() {
 		Estado noIniciado = new NoIniciado();
 		if (this.estadoResultado.equals(noIniciado)){
